@@ -3,9 +3,9 @@ This repository contains PyTorch, C reference code for FAB project.
 ---
 
 ## Pretrained & C Reference Data
-```bash
+You can download the pretrained weights and the extracted data from the following URL.
     https://drive.google.com/drive/folders/1cTyFCJMDTP-DIKNH75waVvRhpdTzzI-m?usp=sharing
-```
+
 
 ---
 ## Pytorch Evaluation 
