@@ -1,18 +1,19 @@
 # MobileNetv2 Quantization
 This repository contains PyTorch, C reference code for FAB project.
+---
 
-## Evaluation 
-###### Modify the dataset root directly in the config (e.g., --dataset.root_train and --dataset.root_val)
-###### If the train dataset root is not set, the ImageNet task cannot be recognized, resulting in an FC layer size mismatch error.
-```bash
-python main_eval.py --common.config-file {config_url} --model.classification.pretrained ./base_weight/mobilenetv2-1.00.pt
-```
 ## Pretrained & C Reference Data
 ```bash
     https://drive.google.com/drive/folders/1cTyFCJMDTP-DIKNH75waVvRhpdTzzI-m?usp=sharing
 ```
 
-
+---
+## Pytorch Evaluation 
+###### Modify the dataset root directly in the config (e.g., --dataset.root_train and --dataset.root_val)
+###### If the train dataset root is not set, the ImageNet task cannot be recognized, resulting in an FC layer size mismatch error.
+```bash
+python main_eval.py --common.config-file {config_url} --model.classification.pretrained ./base_weight/mobilenetv2-1.00.pt
+```
 ## Configuration File 
 ###### W Quant
 ```bash
@@ -54,4 +55,23 @@ quant.calib_iter : Calibration iter
 ###### Build The Quantization Module
 ```
 /cvnets/ptq
+```
+
+## C Reference
+###### 
+```
+make
+./main
+```
+
+
+### Overall code explaination
+```
+main.c :
+qact.c :
+bottleneck.c :
+quantizer.c :
+conv.c :
+utils.c :
+fc.c:
 ```
